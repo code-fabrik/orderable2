@@ -1,7 +1,9 @@
 # Orderable2
-Short description and motivation.
+
+ User defined sorting of ActiveRecord queries for Rails 
 
 ## Installation
+
 Add this line to your application's Gemfile:
 
 ```ruby
