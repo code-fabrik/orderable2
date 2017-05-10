@@ -1,3 +1,5 @@
+require 'orderable2/railtie' if defined?(Rails)
+
 module Orderable2
   extend ActiveSupport::Concern
 
