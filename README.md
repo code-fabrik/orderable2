@@ -17,6 +17,8 @@ $ bundle install
 
 ## Usage
 
+### Controllers
+
 * Include the gem in the controller you wish to be sortable
 
 ```ruby
@@ -77,6 +79,24 @@ So, to create a link that sorts users by country, you could use the following
 
 ```ruby
 users_path(order: 'country:asc')
+```
+
+### Views
+
+Orderable2 includes view helpers that simplify usage in the views.
+
+In order to print the label of a table column or filter, use the following helper
+
+```ruby
+<%= orderable_for :country %>
+```
+
+This automatically creates the necessary label and displays the current sort order using &uarr; or &darr;. Clicking on the label reorders by that column.
+
+By default, the helper lets you sort by multiple columns, for example username ASC, country DESC. If you wish to disable this behaviour and only allow sorting based on a single column, use the `single` option:
+
+```ruby
+<%= orderable_for :country, single: true %>
 ```
 
 ## Contributing
