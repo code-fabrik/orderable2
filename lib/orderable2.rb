@@ -9,7 +9,7 @@ module Orderable2
       t += ' NULLS FIRST' if options.has_key?(column.to_sym) && options[column.to_sym].include?(:nulls_first)
       t += ' NULLS LAST' if options.has_key?(column.to_sym) && options[column.to_sym].include?(:nulls_last)
       t
-    end.join(' ')
+    end.join(', ')
   end
 
   private
